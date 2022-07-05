@@ -39,11 +39,24 @@
 
         /* outer class contains the table and also sets the background color */
         .outer {
-            /* max wisth of the template design */
+            /* max width of the template design */
             max-width: 600px;
             background-color: #ffffff;
             border-left: 1px solid #e5ecee;
             border-right: 1px solid #e5ecee;
+        }
+
+        /* This .main class makes sure that email clients respect the width, color, and centering of the design and is the main email template table   */
+        .main {
+            /* margin re-enforces the centering of the design */
+            margin: 0 auto;
+            /* Makes sure the element takes up 100% of the width of the outer parent element */
+            width: 100%;
+            /* Re-enforce the max width similar to the outer class */
+            max-width: 600px;
+            border-spacing: 0;
+            font-family: sans-serif;
+            color: #4a4a4a;
         }
 
         @media only screen and (max-width: 600px) {}
