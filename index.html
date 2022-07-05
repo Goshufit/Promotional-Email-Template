@@ -14,15 +14,38 @@
             padding: 0;
             background-color: #f6f9fc;
         }
+
         table {
             border-spacing: 0;
         }
+
         td {
             padding: 0;
         }
+
         img {
             border: 0;
         }
+
+        .wrapper {
+            /* width 100% keeps the tables within the design no matter the screen size */
+            width: 100%;
+            background-color: #f6f9fc;
+            /* fixed makes sure the table layout doesnt display out of parent elements */
+            table-layout: fixed;
+            padding-bottom: 40px;
+
+        }
+
+        /* outer class contains the table and also sets the background color */
+        .outer {
+            /* max wisth of the template design */
+            max-width: 600px;
+            background-color: #ffffff;
+            border-left: 1px solid #e5ecee;
+            border-right: 1px solid #e5ecee;
+        }
+
         @media only screen and (max-width: 600px) {}
 
         @media only screen and (max-width: 400px) {}
@@ -35,23 +58,13 @@
         <!-- Add 85-100 Characters of Preheader Text Here -->
     </div>
 
-    <center class="wrapper" style="table-layout:fixed;"></center>
-    <table align="center" style="border-spacing:0;Margin:0;padding:0;width:100%;max-width:600px;">
-        <tr>
-            <td style="padding:0;">
-                <table width="100%;" style="border-spacing:0;">
-                    <tr>
-                        <td class="two-columns" style="padding:0;">
-                            <table class="column"
-                                style="border-spacing:0;width:100%;max-width:300px;vertical-align:top;display:inline-block;">
-                                <tr>
-                                    <td style="padding:10px;">
-                                        <img src="https://via.placeholder.com/280x200" alt="" width="280"
-                                            style="max-width:280px;border-spacing:0;">
-                                    </td>
-                                </tr>
-                            </table>
-                            <!--[if (gte mso 9)|(IE)]>
+    <center class="wrapper">
+        <div class="outer">
+            <table class="main" align="center">
+            </table>
+        </div>
+    </center>
+    <!--[if (gte mso 9)|(IE)]>
 <![endif]-->
 </body>
 
