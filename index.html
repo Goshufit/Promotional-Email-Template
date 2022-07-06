@@ -68,6 +68,32 @@
             max-height: 60px;
         }
 
+        .three-columns {
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 30px;
+            /* font size is inherently added to data tags */
+            font-size: 0;
+        }
+
+        .three-columns .column {
+            width: 100%;
+            max-width: 200px;
+            /* lets the products display next to each other */
+            display: inline-block;
+            /* lets the products stack on smaller screens */
+            vertical-align: top;
+        }
+
+        .padding {
+            padding: 15px;
+        }
+        
+        .content {
+            font-size: 15px;
+            line-height: 20px;
+        }
+
         @media only screen and (max-width: 600px) {}
 
         @media only screen and (max-width: 400px) {}
@@ -168,6 +194,7 @@
                                                             <a href="#">Learn more..</a>
                                                         </td>
                                                     </tr>
+                                                </table>
                                         </tr>
                                     </table>
 
@@ -193,6 +220,7 @@
                                                             <a href="#">Learn more..</a>
                                                         </td>
                                                     </tr>
+                                                </table>
                                         </tr>
                                     </table>
 
@@ -204,8 +232,9 @@
                                                     <tr>
                                                         <td>
                                                             <a href="#">
+                                                                <!-- The class allows us to size the last image differently at different screen sizes so it will be larger on smaller screens -->
                                                                 <img src="./img/380x280-2.jpg" alt="" width="150px"
-                                                                    style="max-width: 150px" class="third-img">
+                                                                    style="max-width: 150px" class="third-img-last">
                                                             </a>
                                                         </td>
                                                     <tr>
