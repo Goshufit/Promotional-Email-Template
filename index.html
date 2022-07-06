@@ -59,6 +59,15 @@
             color: #4a4a4a;
         }
 
+        .social {
+            padding-right: 8px;
+        }
+
+        .rinnegan {
+            max-width: 60px;
+            max-height: 60px;
+        }
+
         @media only screen and (max-width: 600px) {}
 
         @media only screen and (max-width: 400px) {}
@@ -73,8 +82,157 @@
 
     <center class="wrapper">
         <div class="outer">
+
             <table class="main" align="center">
+
+
+                <tr>
+                    <td>
+                        <!-- any table within the main table must have the max width to cover the width of the parent element which is the main table -->
+                        <table width="100%">
+                            <!-- An additional table row and table data tag must be added to give extra padding because a single tr and td tag wouldnt be respected by the email service provider -->
+                            <tr>
+                                <!-- Text align center will help make the images centered -->
+                                <td style="background-color: #378BDA; padding: 10px; text-align: center;">
+
+                                    <a href="https://facebook.com" class="social"><img src="./img/white-facebook.png"
+                                            width="30px" alt=""></a>
+                                    <a href="https://linkedin.com" class="social"><img src="./img/white-linkedin.png"
+                                            width="30px" alt=""></a>
+                                    <a href="https://twitter.com" class="social"><img src="./img/white-twitter.png"
+                                            width="30px" alt=""></a>
+                                    <a href="https://youtube.com" class="social"><img src="./img/white-youtube.png"
+                                            width="30px" alt=""></a>
+                                    <a href="https://instagram.com" class="social"><img src="./img/white-instagram.png"
+                                            width="30px" alt=""></a>
+
+                                </td>
+                            </tr>
+
+
+
+                        </table>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <table width="100%">
+                            <tr>
+                                <td style="padding: 10px; text-align: center;">
+                                    <a href="https://github.com/Goshufit">
+                                        <img class="rinnegan" src="./img/Rinnegan-PNG-File.png" alt="logo" title="logo">
+                                    </a>
+                                    <p style="font-weight: bold;">Rinnegan & Company</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- If you are just adding an image in an anchor tag you dont need to place it in a table just make sure its width is he width of the email and its max-width is 100% so no matter how it is resized it will adjust -->
+                <!-- If you have content that has to be moved on the template it must be in a table -->
+                <tr>
+                    <td>
+                        <a href="#">
+                            <!-- remember to change the width of the image to the max width of the eamil and the max width so it is never wider than the template itself-->
+                            <img src="./img/1200x700.png" width="600px" style="max-width: 100%;" alt="">
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <table width="100%">
+                            <tr>
+                                <td class="three-columns">
+
+                                    <table class="column">
+                                        <tr>
+                                            <td class="padding">
+
+                                                <table class="content">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">
+                                                                <img src="./img/380x280.jpg" alt="" width="150px"
+                                                                    style="max-width: 150px" class="third-img">
+                                                            </a>
+                                                        </td>
+                                                    <tr>
+                                                        <td style="padding: 10px;">
+                                                            <p style="font-weight: bold; font-size: 17px;">APPLE WATCH
+                                                            </p>
+                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                                Ratione ipsam adipisci
+                                                            </p>
+                                                            <a href="#">Learn more..</a>
+                                                        </td>
+                                                    </tr>
+                                        </tr>
+                                    </table>
+
+                                    <table class="column">
+                                        <tr>
+                                            <td class="padding">
+
+                                                <table class="content">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">
+                                                                <img src="./img/380x280-3.jpg" alt="" width="150px"
+                                                                    style="max-width: 150px" class="third-img">
+                                                            </a>
+                                                        </td>
+                                                    <tr>
+                                                        <td style="padding: 10px;">
+                                                            <p style="font-weight: bold; font-size: 17px;">WATCH BANDS
+                                                            </p>
+                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                                Ratione ipsam adipisci
+                                                            </p>
+                                                            <a href="#">Learn more..</a>
+                                                        </td>
+                                                    </tr>
+                                        </tr>
+                                    </table>
+
+                                    <table class="column">
+                                        <tr>
+                                            <td class="padding">
+
+                                                <table class="content">
+                                                    <tr>
+                                                        <td>
+                                                            <a href="#">
+                                                                <img src="./img/380x280-2.jpg" alt="" width="150px"
+                                                                    style="max-width: 150px" class="third-img">
+                                                            </a>
+                                                        </td>
+                                                    <tr>
+                                                        <td style="padding: 10px;">
+                                                            <p style="font-weight: bold; font-size: 17px;">EAR PODS
+                                                            </p>
+                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                                Ratione ipsam adipisci
+                                                            </p>
+                                                            <a href="#">Learn more..</a>
+                                                        </td>
+                                                    </tr>
+
+                                                </table>
+
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
             </table>
+
         </div>
     </center>
     <!--[if (gte mso 9)|(IE)]>
