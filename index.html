@@ -15,6 +15,7 @@
             supported-color-schemes: light dark;
         } */
 
+        /*Margin: 0; allows no spacing at the top or bottom of the email */
         body {
             margin: 0;
             padding: 0;
@@ -23,6 +24,7 @@
             color: #f0f0f0 !important; */
         }
 
+        /* Border-spacing: 0; stops email clients from putting space in between the tables  */
         table {
             border-spacing: 0;
         }
@@ -41,17 +43,9 @@
             background-color: #f6f9fc;
             /* fixed makes sure the table layout doesnt display out of parent elements */
             table-layout: fixed;
+            /* gives spacing tot he bottom of the email template */
             padding-bottom: 40px;
-
-        }
-
-        /* outer class contains the table and also sets the background color */
-        .outer {
-            /* max width of the template design */
-            max-width: 600px;
             background-color: #ffffff;
-            border-left: 1px solid #e5ecee;
-            border-right: 1px solid #e5ecee;
         }
 
         /* This .main class makes sure that email clients respect the width, color, and centering of the design and is the main email template table   */
@@ -65,6 +59,8 @@
             border-spacing: 0;
             font-family: sans-serif;
             color: #4a4a4a;
+            border-left: 1px solid #e5ecee;
+            border-right: 1px solid #e5ecee;
         }
 
         .social {
@@ -121,6 +117,11 @@
             font-weight: bolder;
         }
 
+        .border {
+            border-left: 1px solid #e5ecee;
+            border-right: 1px solid #e5ecee;
+        }
+
         @media only screen and (max-width: 600px) {
             img.third-img-last {
                 width: 200px !important;
@@ -142,224 +143,223 @@
     </style>
 </head>
 
-<body style="Margin:0;padding:0;min-width:100%;">
+<body>
     <div
         style="font-size:0px;line-height:1px;mso-line-height-rule:exactly;display:none;max-width:0px;max-height:0px;opacity:0;overflow:hidden;mso-hide:all;">
         <!-- Add 85-100 Characters of Preheader Text Here -->
     </div>
-
+    <!-- Center tag makes sure the email is centered in email clients -->
     <center class="wrapper">
-        <div class="outer">
-
-            <table class="main" align="center">
 
 
-                <tr>
-                    <td>
-                        <!-- any table within the main table must have the max width to cover the width of the parent element which is the main table -->
-                        <table width="100%">
-                            <!-- An additional table row and table data tag must be added to give extra padding because a single tr and td tag wouldnt be respected by the email service provider -->
-                            <tr>
-                                <!-- Text align center will help make the images centered -->
-                                <td style="background-color: #378BDA; padding: 10px; text-align: center;">
-
-                                    <a href="https://facebook.com" class="social"><img
-                                            src="https://i.ibb.co/gyRW8zn/white-facebook.png" width="30px" alt=""></a>
-                                    <a href="https://linkedin.com" class="social"><img
-                                            src="https://i.ibb.co/tmjcSng/white-linkedin.png" width="30px" alt=""></a>
-                                    <a href="https://twitter.com" class="social"><img
-                                            src="https://i.ibb.co/dW9DHgw/white-twitter.png" width="30px" alt=""></a>
-                                    <a href="https://youtube.com" class="social"><img
-                                            src="https://i.ibb.co/MGdQcrL/white-youtube.png" width="30px" alt=""></a>
-                                    <a href="https://instagram.com" class="social"><img
-                                            src="https://i.ibb.co/s1W6vTc/white-instagram.png" width="30px" alt=""></a>
-
-                                </td>
-                            </tr>
+        <table class="main" align="center">
 
 
+            <tr>
+                <td>
+                    <!-- any table within the main table must have the max width to cover the width of the parent element which is the main table -->
+                    <table width="100%" class="border">
+                        <!-- An additional table row and table data tag must be added to give extra padding because a single tr and td tag wouldnt be respected by the email service provider -->
+                        <tr>
+                            <!-- Text align center will help make the images centered -->
+                            <td style="background-color: #378BDA; padding: 10px; text-align: center;">
 
-                        </table>
-                    </td>
-                </tr>
+                                <a href="https://facebook.com" class="social"><img
+                                        src="https://i.ibb.co/gyRW8zn/white-facebook.png" width="30px" alt=""></a>
+                                <a href="https://linkedin.com" class="social"><img
+                                        src="https://i.ibb.co/tmjcSng/white-linkedin.png" width="30px" alt=""></a>
+                                <a href="https://twitter.com" class="social"><img
+                                        src="https://i.ibb.co/dW9DHgw/white-twitter.png" width="30px" alt=""></a>
+                                <a href="https://youtube.com" class="social"><img
+                                        src="https://i.ibb.co/MGdQcrL/white-youtube.png" width="30px" alt=""></a>
+                                <a href="https://instagram.com" class="social"><img
+                                        src="https://i.ibb.co/s1W6vTc/white-instagram.png" width="30px" alt=""></a>
 
-                <tr>
-                    <td>
-                        <table width="100%">
-                            <tr>
-                                <td style="padding: 10px; text-align: center;">
-                                    <a href="https://github.com/Goshufit">
-                                        <img class="rinnegan" src="https://i.ibb.co/yXtfT3y/Rinnegan-PNG-File.png"
-                                            alt="logo" title="logo">
-                                    </a>
-                                    <p style="font-weight: bold;">Rinnegan & Company</p>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <!-- If you are just adding an image in an anchor tag you dont need to place it in a table just make sure its width is he width of the email and its max-width is 100% so no matter how it is resized it will adjust -->
-                <!-- If you have content that has to be moved on the template it must be in a table -->
-                <tr>
-                    <td>
-                        <a href="#">
-                            <!-- remember to change the width of the image to the max width of the eamil and the max width so it is never wider than the template itself-->
-                            <img src="https://i.ibb.co/55ns4sR/1200x700.png" width="600px" style="max-width: 100%;"
-                                alt="">
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <table width="100%">
-                            <tr>
-                                <td class="three-columns">
-
-                                    <table class="column">
-                                        <tr>
-                                            <td class="padding">
-
-                                                <table class="content">
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#">
-                                                                <img src="https://i.ibb.co/vXk0q5b/380x280.jpg" alt=""
-                                                                    width="150px" style="max-width: 150px"
-                                                                    class="third-img">
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="padding: 10px;">
-                                                            <p style="font-weight: bold; font-size: 17px;">APPLE WATCH
-                                                            </p>
-                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                                Ratione ipsam adipisci
-                                                            </p>
-                                                            <a class="btn" href="#">Learn more..</a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-
-                                    <table class="column">
-                                        <tr>
-                                            <td class="padding">
-
-                                                <table class="content">
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#">
-                                                                <img src="https://i.ibb.co/6b7m6dS/380x280-3.jpg" alt=""
-                                                                    width="150px" style="max-width: 150px"
-                                                                    class="third-img">
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="padding: 10px;">
-                                                            <p style="font-weight: bold; font-size: 17px;">WATCH BANDS
-                                                            </p>
-                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                                Ratione ipsam adipisci
-                                                            </p>
-                                                            <a class="btn" href="#">Learn more..</a>
-                                                        </td>
-                                                    </tr>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </table>
-
-                                    <table class="column">
-                                        <tr>
-                                            <td class="padding">
-
-                                                <table class="content">
-                                                    <tr>
-                                                        <td>
-                                                            <a href="#">
-                                                                <!-- The class allows us to size the last image differently at different screen sizes so it will be larger on smaller screens -->
-                                                                <img src="https://i.ibb.co/nwh4xBH/380x280-2.jpg" alt=""
-                                                                    width="150px" style="max-width: 150px"
-                                                                    class="third-img-last">
-                                                            </a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="padding: 10px;">
-                                                            <p style="font-weight: bold; font-size: 17px;">EAR PODS
-                                                            </p>
-                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                                                Ratione ipsam adipisci
-                                                            </p>
-                                                            <a class="btn" href="#">Learn more..</a>
-                                                        </td>
-                                                    </tr>
-
-                                                </table>
-
-                                            </td>
-                                        </tr>
-                                    </table>
-
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td style="background-color: #3788da; height: 10px;"></td>
-                </tr>
-
-                <tr>
-                    <td style="background-color:#efefef">
-                        <table width="100%">
-
-                            <tr>
-                                <td style="padding: 20px; text-align: center;">
-
-                                    <a href="https://github.com/Goshufit">
-                                        <img class="rinnegan" src="https://i.ibb.co/yXtfT3y/Rinnegan-PNG-File.png"
-                                            alt="logo" title="logo">
-                                    </a>
-                                    <p style="font-weight: bold;">Rinnegan & Company</p>
-                                    <!-- Use capitol M for outlook clients to read CSS -->
-                                    <p style="font-size: 16px; Margin-top: 18px; Margin-bottom: 10px;">
-                                        Promotional Email
-                                    </p>
-                                    <p style="font-size: 16px; Margin-top: 18px; Margin-bottom: 10px;">
-                                        123 Email Developer Lane, City, State 77777
-                                    </p>
-                                    <a href="mailto:email@email.com">
-                                        <p>email@developer.com</p>
-                                    </a>
-                                    <a href="#">
-                                        <p>1-800-CSS-HTML</p>
-                                    </a>
-                                    <p style="font-size: 16px; Margin-top: 38px; Margin-bottom: 30px;">
-                                        <a class="btn-sub" href="#">SUBSCRIBE</a>
-                                    </p>
-
-                                </td>
-                            </tr>
-
-                        </table>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td style="background-color: #3788da; height: 20px; border-radius: 0 0 15px 15px;"></td>
-                </tr>
+                            </td>
+                        </tr>
 
 
-            </table>
 
-        </div>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td style="padding: 10px; text-align: center;">
+                                <a href="https://github.com/Goshufit">
+                                    <img class="rinnegan" src="https://i.ibb.co/yXtfT3y/Rinnegan-PNG-File.png"
+                                        alt="logo" title="logo">
+                                </a>
+                                <p style="font-weight: bold;">Rinnegan & Company</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- If you are just adding an image in an anchor tag you dont need to place it in a table just make sure its width is he width of the email and its max-width is 100% so no matter how it is resized it will adjust -->
+            <!-- If you have content that has to be moved on the template it must be in a table -->
+            <tr>
+                <td>
+                    <a href="#">
+                        <!-- remember to change the width of the image to the max width of the eamil and the max width so it is never wider than the template itself-->
+                        <img src="https://i.ibb.co/55ns4sR/1200x700.png" width="600px" style="max-width: 100%;" alt="">
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <table width="100%">
+                        <tr>
+                            <td class="three-columns">
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">
+                                                            <img src="https://i.ibb.co/vXk0q5b/380x280.jpg" alt=""
+                                                                width="150px" style="max-width: 150px"
+                                                                class="third-img">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 10px;">
+                                                        <p style="font-weight: bold; font-size: 17px;">APPLE WATCH
+                                                        </p>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                            Ratione ipsam adipisci
+                                                        </p>
+                                                        <a class="btn" href="#">Learn more..</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">
+                                                            <img src="https://i.ibb.co/6b7m6dS/380x280-3.jpg" alt=""
+                                                                width="150px" style="max-width: 150px"
+                                                                class="third-img">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 10px;">
+                                                        <p style="font-weight: bold; font-size: 17px;">WATCH BANDS
+                                                        </p>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                            Ratione ipsam adipisci
+                                                        </p>
+                                                        <a class="btn" href="#">Learn more..</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <table class="column">
+                                    <tr>
+                                        <td class="padding">
+
+                                            <table class="content">
+                                                <tr>
+                                                    <td>
+                                                        <a href="#">
+                                                            <!-- The class allows us to size the last image differently at different screen sizes so it will be larger on smaller screens -->
+                                                            <img src="https://i.ibb.co/nwh4xBH/380x280-2.jpg" alt=""
+                                                                width="150px" style="max-width: 150px"
+                                                                class="third-img-last">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td style="padding: 10px;">
+                                                        <p style="font-weight: bold; font-size: 17px;">EAR PODS
+                                                        </p>
+                                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                                            Ratione ipsam adipisci
+                                                        </p>
+                                                        <a class="btn" href="#">Learn more..</a>
+                                                    </td>
+                                                </tr>
+
+                                            </table>
+
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="background-color: #3788da; height: 10px;"></td>
+            </tr>
+
+            <tr>
+                <td style="background-color:#efefef">
+                    <table width="100%">
+
+                        <tr>
+                            <td style="padding: 20px; text-align: center;">
+
+                                <a href="https://github.com/Goshufit">
+                                    <img class="rinnegan" src="https://i.ibb.co/yXtfT3y/Rinnegan-PNG-File.png"
+                                        alt="logo" title="logo">
+                                </a>
+                                <p style="font-weight: bold;">Rinnegan & Company</p>
+                                <!-- Use capitol M for outlook clients to read CSS -->
+                                <p style="font-size: 16px; Margin-top: 18px; Margin-bottom: 10px;">
+                                    Promotional Email
+                                </p>
+                                <p style="font-size: 16px; Margin-top: 18px; Margin-bottom: 10px;">
+                                    123 Email Developer Lane, City, State 77777
+                                </p>
+                                <a href="mailto:email@email.com">
+                                    <p>email@developer.com</p>
+                                </a>
+                                <a href="#">
+                                    <p>1-800-CSS-HTML</p>
+                                </a>
+                                <p style="font-size: 16px; Margin-top: 38px; Margin-bottom: 30px;">
+                                    <a class="btn-sub" href="#">SUBSCRIBE</a>
+                                </p>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="background-color: #3788da; height: 20px; border-radius: 0 0 15px 15px;"></td>
+            </tr>
+
+
+        </table>
+
+
     </center>
     <!--[if (gte mso 9)|(IE)]>
 <![endif]-->
